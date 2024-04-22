@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xdvrxdglPg8KSY5dxzUaYZf81LCbqwvgrjnu7oM0GW0HaDHOpZKTqrn14ltmuQiiQwVfGfRGXVTEJRT5Ft48Jw==",
+  "success": true,
+  "projectFilePath": "/Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/JulioGuzmanProject.csproj",
+  "expectedPackageFiles": [
+    "/Users/julioguzman/.nuget/packages/microsoft.aspnetcore.spaproxy/7.0.18/microsoft.aspnetcore.spaproxy.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

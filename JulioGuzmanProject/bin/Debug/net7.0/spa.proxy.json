@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44441",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "/Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/ClientApp/",
+"MaxTimeoutInSeconds": "120"
+}
+}

@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "JulioGuzmanProject/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SpaProxy": "7.0.18"
+        },
+        "runtime": {
+          "JulioGuzmanProject.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SpaProxy/7.0.18": {
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.SpaProxy.dll": {
+            "assemblyVersion": "7.0.18.0",
+            "fileVersion": "7.0.1824.16924"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JulioGuzmanProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.SpaProxy/7.0.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KJSvVXiLqbeK1Skmd4yINskg2X90QA7AKtKvjUdFhM2kggNNmZPKvM00yyHLRMe6EO1cjHrqjKTuoFDnc4aE2A==",
+      "path": "microsoft.aspnetcore.spaproxy/7.0.18",
+      "hashPath": "microsoft.aspnetcore.spaproxy.7.0.18.nupkg.sha512"
+    }
+  }
+}

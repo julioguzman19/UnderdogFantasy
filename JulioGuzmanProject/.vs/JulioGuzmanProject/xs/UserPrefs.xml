@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{646859B8-11F4-4DC0-83E8-5E36BAC76CE1}|Default">
+  <MonoDevelop.Ide.ItemProperties.JulioGuzmanProject PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="JulioGuzmanProject/ClientApp/public/index.html">
+    <Files>
+      <File FileName="JulioGuzmanProject/ClientApp/public/index.html" Line="19" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="JulioGuzmanProject" expanded="True">
+            <Node name="JulioGuzmanProject" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="public" expanded="True">
+                  <Node name="index.html" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
