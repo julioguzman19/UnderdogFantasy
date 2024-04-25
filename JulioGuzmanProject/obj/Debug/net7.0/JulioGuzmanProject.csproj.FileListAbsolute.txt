@@ -30,3 +30,5 @@
 /Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/obj/Debug/net7.0/JulioGuzmanProject.pdb
 /Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/obj/Debug/net7.0/JulioGuzmanProject.genruntimeconfig.cache
 /Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/obj/Debug/net7.0/ref/JulioGuzmanProject.dll
+/Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/bin/Debug/net7.0/package-lock.json
+/Users/julioguzman/Repos/UnderdogFantasy/JulioGuzmanProject/bin/Debug/net7.0/package.json

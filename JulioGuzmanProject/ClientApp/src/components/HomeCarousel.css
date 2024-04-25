@@ -1,0 +1,10 @@
+/* MAKE RESPONSIVE!!!!! */
+.custom-dots-container {
+  position: absolute;
+  top: 10px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure dots are above the slides */
+}
+
+  
