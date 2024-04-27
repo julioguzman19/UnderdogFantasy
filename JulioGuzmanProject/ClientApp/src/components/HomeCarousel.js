@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import MagicSliderDots from 'react-magic-slider-dots';
 import 'react-magic-slider-dots/dist/magic-dots.css';
 import './HomeCarousel.css';
+import '../Global.css';
 
 const Carousel = () => {
   const settings = {
@@ -15,14 +16,14 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots) => {
-      return <div className="custom-dots-container">
+      return <div>
         <MagicSliderDots dots={dots} numDotsToShow={4} dotWidth={30} />
         </div>;
     }
   };
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className='center'>
       <div>
         <h3>Slide 1</h3>
       </div>
