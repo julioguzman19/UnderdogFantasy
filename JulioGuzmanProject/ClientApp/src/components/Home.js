@@ -8,7 +8,6 @@ export class Home extends Component {
   render() {
     return (
       <div className='background-color'>
-        <HomeCarousel />
       </div>
     );
   }
