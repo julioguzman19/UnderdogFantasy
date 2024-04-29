@@ -1,3 +1,18 @@
-.background-color{
-    background-color: #1b1b1b;
-  }
+.background-color {
+  background-color: #f0f0f0;
+}
+
+h1{
+  color: rgb(224, 180, 0)
+}
+
+label{
+  color:#1b1b1b;
+  text-align: start;
+}
+  
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
