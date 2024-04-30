@@ -5,6 +5,32 @@ import "./Home.css";
 export class Home extends Component {
   static displayName = Home.name;
 
+  handleEmailBlur = (event) => {
+    const emailInput = event.target;
+    const emailErrorMessageId = document.getElementById("emailErrorMessageId");
+    const emailInputId = document.getElementById("emailInputId");
+
+    if (
+      !this.isValidEmail(emailInput.value.trim()) &&
+      !this.isBlank(emailInput.value.trim())
+    ) {
+      emailErrorMessageId.style.display = "block";
+      emailInputId.style.borderBlockColor = "red";
+    } else {
+      emailErrorMessageId.style.display = "none";
+      emailInputId.style.borderBlockColor = "none";
+    }
+  };
+
+  isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  isBlank = (value) => {
+    return value === "";
+  };
+
   render() {
     return (
       <div className="center">
@@ -18,7 +44,14 @@ export class Home extends Component {
 
           <label>Email</label>
           {/* TODO: Possibly remove placeholder or label which ever looks better on phone */}
-          <input />
+          <input
+            id="emailInputId"
+            type="email"
+            name="Email"
+            required
+            onBlur={this.handleEmailBlur}
+          />
+          <div id="emailErrorMessageId">Please use a valid email.</div>
 
           <label>Password</label>
           <input />
@@ -40,7 +73,7 @@ export class Home extends Component {
 
           <div className="responsible-gaming-container">
             <p className="responsible-gaming-terms">
-              <b className="color-gold">Underdog Responsible Gaming</b> 
+              <b className="color-gold">Underdog Responsible Gaming</b>
               <br />
               <b>Concerned with your play?</b>
               <br />

@@ -17,14 +17,22 @@ label {
   font-size: 1rem;
   font-weight: bold;
   text-align: start;
-}
+} 
 
 input {
-  background-color: #ffffff;
-  border: none;
   border-radius: 0.25rem;
   line-height: 2rem;
   margin-top: -0.5rem;
+}
+
+#emailErrorMessageId{
+  background-color: #c02419;
+  border-radius: 0.25rem;
+  color:#f0f0f0;
+  display: none;
+  margin-top: -0.75rem;
+  padding: 0.5rem;
+  text-align: start;
 }
 
 .password-reset-link {
