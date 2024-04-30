@@ -1,18 +1,79 @@
-.background-color {
-  background-color: #f0f0f0;
-}
-
-h1{
-  color: rgb(224, 180, 0)
-}
-
-label{
-  color:#1b1b1b;
-  text-align: start;
-}
-  
-
 .content {
   display: flex;
   flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+h1 {
+  color: rgb(224, 180, 0);
+  font-family: Kanit, sans-serif;
+  font-size: 3.5rem;
+  font-style:italic;
+  font-weight: bold;
+}
+
+label {
+  color: #1b1b1b;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+input {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  margin-top: -0.5rem;
+}
+
+.password-reset-link {
+  color:#6b6b6b;
+  font-size: 1rem;
+  text-align: end;
+  text-decoration: none;
+  margin-top: -0.5rem;
+}
+
+.sign-up-message{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sign-up-link{
+  color: #0ea023;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button{
+  background-color: #d8d8d8;
+  border: none;
+  border-radius: 0.25rem;
+  color:#6b6b6b;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 auto; /* Center horizontally */
+  padding: 0.25rem 1rem;
+  width:fit-content;
+}
+
+p{
+  font-size: 0.75em;
+}
+
+.responsible-gaming-container{
+  background: linear-gradient(to bottom right, #d8d8d8,#d8d8d8, #ffe47a);
+}
+
+.responsible-gaming-terms{
+  max-width: 340px;
+}
+
+.color-gold{
+  color: #ad8b00;
+}
+
+.responsible-gaming-terms b {
+  padding-bottom: 100px; /* FIX somehting is overwriting it */
 }
