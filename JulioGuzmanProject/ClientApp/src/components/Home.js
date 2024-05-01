@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import DogImage from "../assets/dog.png";
 import "./Home.css";
 
 export class Home extends Component {
@@ -31,11 +32,24 @@ export class Home extends Component {
     return value === "";
   };
 
+  togglePasswordVisibility = () => {
+    const passwordInput = document.getElementById('passwordId');
+    const toggleIcon = document.getElementById('togglePasswordId');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      toggleIcon.classList.replace('bi-eye-fill', 'bi-eye-slash');
+    } else {
+      passwordInput.type = 'password';
+      toggleIcon.classList.replace('bi-eye-slash', 'bi-eye-fill');
+    }
+  };
+  
+
   render() {
     return (
       <div className="center">
         <div className="content">
-          <img src="image.jpg" alt="Image goes here" />
+          <img src={DogImage} alt="Dog Image" />
           <h1>
             UNDERDOG
             <br />
@@ -54,7 +68,13 @@ export class Home extends Component {
           <div id="emailErrorMessageId">Please use a valid email.</div>
 
           <label>Password</label>
-          <input />
+          <div class="input-group">
+            <input type="password" class="form-control" id="passwordId" />
+            <span class="input-group-text" onClick={this.togglePasswordVisibility}>
+              <i id="togglePasswordId" class="bi bi-eye-fill"></i>
+            </span>
+          </div>
+
           <Link className="password-reset-link">Forgot Password?</Link>
 
           <button>Log In</button>
@@ -63,7 +83,6 @@ export class Home extends Component {
             Don't have an account? <Link className="sign-up-link">Sign up</Link>
           </p>
 
-<input />
           {/* Use a tag when re-directing outside website/app */}
           <p>
             If you or someone you know has a gambling problem, help is
