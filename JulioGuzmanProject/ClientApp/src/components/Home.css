@@ -20,6 +20,8 @@ label {
 } 
 
 input {
+  border-color: #d8d8d8;
+  border-style: solid;  
   border-radius: 0.25rem;
   line-height: 2rem;
   margin-top: -0.5rem;
@@ -84,4 +86,13 @@ p{
 
 .responsible-gaming-terms b {
   padding-bottom: 100px; /* FIX somehting is overwriting it */
+}
+
+.center {
+  margin:auto;
+  text-align: center;
+}
+
+.color-yellow-rgb{
+  color: rgb(224, 180, 0);
 }

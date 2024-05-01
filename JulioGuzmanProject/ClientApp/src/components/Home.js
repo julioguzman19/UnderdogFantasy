@@ -15,10 +15,10 @@ export class Home extends Component {
       !this.isBlank(emailInput.value.trim())
     ) {
       emailErrorMessageId.style.display = "block";
-      emailInputId.style.borderBlockColor = "red";
+      emailInputId.style.borderColor = "#c02419";
     } else {
       emailErrorMessageId.style.display = "none";
-      emailInputId.style.borderBlockColor = "none";
+      emailInputId.style.borderColor = "#d8d8d8";
     }
   };
 
@@ -63,6 +63,7 @@ export class Home extends Component {
             Don't have an account? <Link className="sign-up-link">Sign up</Link>
           </p>
 
+<input />
           {/* Use a tag when re-directing outside website/app */}
           <p>
             If you or someone you know has a gambling problem, help is
