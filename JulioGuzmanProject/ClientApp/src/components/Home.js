@@ -6,22 +6,72 @@ import "./Home.css";
 export class Home extends Component {
   static displayName = Home.name;
 
-  handleEmailBlur = (event) => {
-    const emailInput = event.target;
-    const emailErrorMessageId = document.getElementById("emailErrorMessageId");
-    const emailInputId = document.getElementById("emailInputId");
+  state = {
+    loginButtonStyles: {
+      backgroundColor: "#d8d8d8",
+      color: "#6b6b6b",
+    },
+    isEmailValid: false,
+    isEmailErrorMessageVisible: false,
+    emailInputStyle: { borderColor: "#d8d8d8" },
+    isPasswordEntered: false,
+    passwordType: "password",
+    toggleIconClass: "bi-eye-fill",
+  };
 
-    if (
-      !this.isValidEmail(emailInput.value.trim()) &&
-      !this.isBlank(emailInput.value.trim())
-    ) {
-      emailErrorMessageId.style.display = "block";
-      emailInputId.style.borderColor = "#c02419";
+  enableLoginButton = () => {
+    this.setState({
+      loginButtonStyles: {
+        backgroundColor: "#0ea023",
+        color: "#f0f0f0",
+      },
+    });
+  };
+
+  disableLoginButton = () => {
+    this.setState({
+      loginButtonStyles: {
+        backgroundColor: "#d8d8d8",
+        color: "#6b6b6b",
+      },
+    });
+  };
+
+  updateLoginButton = () => {
+    console.log(
+      `Update: ${this.state.isEmailValid} && ${this.state.isPasswordEntered}`
+    );
+    if (this.state.isEmailValid && this.state.isPasswordEntered) {
+      console.log("enabled");
+      this.enableLoginButton();
     } else {
-      emailErrorMessageId.style.display = "none";
-      emailInputId.style.borderColor = "#d8d8d8";
+      this.disableLoginButton();
     }
   };
+
+  handleEmailBlur = (event) => {
+    const emailValue = event.target.value.trim();
+    const isValid = this.isValidEmail(emailValue) && !this.isBlank(emailValue);
+
+    this.setState(
+      {
+        isEmailValid: isValid,
+        isEmailErrorMessageVisible: !isValid,
+        emailInputStyle: { borderColor: isValid ? "#d8d8d8" : "#c02419" },
+      },
+      this.updateLoginButton
+    );
+  };
+
+  handlePasswordBlur = (event) => {
+    const passwordValue = event.target.value.trim();
+    this.setState({
+      isPasswordEntered: passwordValue.length > 0
+    }, () => {
+      this.updateLoginButton();  
+    });
+  };
+  
 
   isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -33,17 +83,14 @@ export class Home extends Component {
   };
 
   togglePasswordVisibility = () => {
-    const passwordInput = document.getElementById('passwordId');
-    const toggleIcon = document.getElementById('togglePasswordId');
-    if (passwordInput.type === 'password') {
-      passwordInput.type = 'text';
-      toggleIcon.classList.replace('bi-eye-fill', 'bi-eye-slash');
-    } else {
-      passwordInput.type = 'password';
-      toggleIcon.classList.replace('bi-eye-slash', 'bi-eye-fill');
-    }
+    this.setState((prevState) => ({
+      passwordType: prevState.passwordType === "password" ? "text" : "password",
+      toggleIconClass:
+        prevState.toggleIconClass === "bi-eye-fill"
+          ? "bi-eye-slash"
+          : "bi-eye-fill",
+    }));
   };
-  
 
   render() {
     return (
@@ -57,27 +104,39 @@ export class Home extends Component {
           </h1>
 
           <label>Email</label>
-          {/* TODO: Possibly remove placeholder or label which ever looks better on phone */}
           <input
             id="emailInputId"
             type="email"
             name="Email"
             required
+            style={this.state.emailInputStyle}
             onBlur={this.handleEmailBlur}
           />
-          <div id="emailErrorMessageId">Please use a valid email.</div>
+          {this.state.isEmailErrorMessageVisible && (
+            <div className="emailErrorMessage">Please use a valid email.</div>
+          )}
 
           <label>Password</label>
           <div class="input-group">
-            <input type="password" class="form-control" id="passwordId" />
-            <span class="input-group-text" onClick={this.togglePasswordVisibility}>
-              <i id="togglePasswordId" class="bi bi-eye-fill"></i>
+            <input
+              type={this.state.passwordType}
+              class="form-control"
+              id="passwordId"
+              onBlur={this.handlePasswordBlur}
+            />
+            <span
+              class="input-group-text"
+              onClick={this.togglePasswordVisibility}
+            >
+              <i className={`bi ${this.state.toggleIconClass}`}></i>
             </span>
           </div>
 
           <Link className="password-reset-link">Forgot Password?</Link>
 
-          <button>Log In</button>
+          <button id="loginButtonId" style={this.state.loginButtonStyles}>
+            Log In
+          </button>
 
           <p className="sign-up-message">
             Don't have an account? <Link className="sign-up-link">Sign up</Link>
