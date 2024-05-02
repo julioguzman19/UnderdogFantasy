@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DogImage from "../../assets/dog.png";
 import EmailInput from "./EmailInput";
+import PasswordInput from "./PasswordInput";
 import "./Home.css";
 
 export class Home extends Component {
@@ -38,38 +39,19 @@ export class Home extends Component {
 
   updateLoginButton = () => {
     if (this.state.isEmailValid && this.state.isPasswordEntered) {
-      console.log("enabled");
       this.enableLoginButton();
     } else {
       this.disableLoginButton();
     }
   };
 
-  handlePasswordBlur = (event) => {
-    const passwordValue = event.target.value.trim();
-    this.setState(
-      {
-        isPasswordEntered: passwordValue.length > 0,
-      },
-      () => {
-        this.updateLoginButton();
-      }
-    );
-  };
-
-  togglePasswordVisibility = () => {
-    this.setState((prevState) => ({
-      passwordType: prevState.passwordType === "password" ? "text" : "password",
-      toggleIconClass:
-        prevState.toggleIconClass === "bi-eye-fill"
-          ? "bi-eye-slash"
-          : "bi-eye-fill",
-    }));
-  };
-
   handleValidEmailChange = (isValid) => {
     this.setState({ isEmailValid: isValid }, this.updateLoginButton);
-};
+  };
+
+  handlePasswordChange = (isEntered) => {
+    this.setState({ isPasswordEntered: isEntered }, this.updateLoginButton);
+  };
 
   render() {
     return (
@@ -86,20 +68,7 @@ export class Home extends Component {
           <EmailInput onValidChange={this.handleValidEmailChange} />
 
           <label>Password</label>
-          <div class="input-group">
-            <input
-              type={this.state.passwordType}
-              class="form-control"
-              id="passwordId"
-              onBlur={this.handlePasswordBlur}
-            />
-            <span
-              class="input-group-text"
-              onClick={this.togglePasswordVisibility}
-            >
-              <i className={`bi ${this.state.toggleIconClass}`}></i>
-            </span>
-          </div>
+          <PasswordInput onPasswordChange={this.handlePasswordChange} />
 
           <Link className="password-reset-link">Forgot Password?</Link>
 
