@@ -14,18 +14,22 @@ function EmailInput({ onValidChange }) {
     return emailRegex.test(email);
   };
 
+  const isBlank = (value) => {
+    return value === "";
+  };
+
   const handleEmailBlur = (event) => {
     const emailValue = event.target.value.trim();
-    const isValid = isValidEmail(emailValue) && emailValue !== "";
+    const isEmailValidOrBlank = isValidEmail(emailValue) || isBlank(emailValue);
 
-    setIsEmailErrorMessageVisible(!isValid);
-    setEmailInputStyle({ borderColor: isValid ? "#d8d8d8" : "#c02419" });
+    setIsEmailErrorMessageVisible(!isEmailValidOrBlank);
+    setEmailInputStyle({ borderColor: isEmailValidOrBlank ? "#d8d8d8" : "#c02419" });
 
     // Notify parent component about the validation status
     if (onValidChange) {
-        onValidChange(isValid);
+      onValidChange(isValidEmail(emailValue));
+    }
   };
-}
 
   return (
     <div>
@@ -39,7 +43,7 @@ function EmailInput({ onValidChange }) {
         onChange={(e) => setEmail(e.target.value)}
       />
       {isEmailErrorMessageVisible && (
-        <div className="emailErrorMessage" >Please enter a valid email.</div>
+        <div className="emailErrorMessage">Please enter a valid email.</div>
       )}
     </div>
   );

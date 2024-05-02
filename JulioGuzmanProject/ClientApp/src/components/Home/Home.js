@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import DogImage from "../assets/dog.png";
+import DogImage from "../../assets/dog.png";
 import EmailInput from "./EmailInput";
 import "./Home.css";
 
