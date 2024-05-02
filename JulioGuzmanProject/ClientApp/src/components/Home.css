@@ -24,15 +24,9 @@ input {
   border-style: solid;  
   border-radius: 0.25rem;
   line-height: 2rem;
+  
   }
 
-.emailErrorMessage{
-  background-color: #c02419;
-  border-radius: 0.25rem;
-  color:#f0f0f0;
-  padding: 0.5rem;
-  text-align: start;
-} 
 
 .password-reset-link {
   color:#6b6b6b;

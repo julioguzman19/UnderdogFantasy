@@ -1,0 +1,14 @@
+input {
+    border-style: solid;  
+    border-radius: 0.25rem;
+    line-height: 2rem;
+    width: 100%;
+    }
+    
+.emailErrorMessage{
+    background-color: #c02419;
+    border-radius: 0.25rem;
+    color:#f0f0f0;
+    padding: 0.5rem;
+    text-align: start;
+  } 

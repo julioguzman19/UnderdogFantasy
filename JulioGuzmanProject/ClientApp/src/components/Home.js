@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DogImage from "../assets/dog.png";
+import EmailInput from "./EmailInput";
 import "./Home.css";
 
 export class Home extends Component {
@@ -12,8 +13,6 @@ export class Home extends Component {
       color: "#6b6b6b",
     },
     isEmailValid: false,
-    isEmailErrorMessageVisible: false,
-    emailInputStyle: { borderColor: "#d8d8d8" },
     isPasswordEntered: false,
     passwordType: "password",
     toggleIconClass: "bi-eye-fill",
@@ -38,9 +37,6 @@ export class Home extends Component {
   };
 
   updateLoginButton = () => {
-    console.log(
-      `Update: ${this.state.isEmailValid} && ${this.state.isPasswordEntered}`
-    );
     if (this.state.isEmailValid && this.state.isPasswordEntered) {
       console.log("enabled");
       this.enableLoginButton();
@@ -49,37 +45,16 @@ export class Home extends Component {
     }
   };
 
-  handleEmailBlur = (event) => {
-    const emailValue = event.target.value.trim();
-    const isValid = this.isValidEmail(emailValue) && !this.isBlank(emailValue);
-
-    this.setState(
-      {
-        isEmailValid: isValid,
-        isEmailErrorMessageVisible: !isValid,
-        emailInputStyle: { borderColor: isValid ? "#d8d8d8" : "#c02419" },
-      },
-      this.updateLoginButton
-    );
-  };
-
   handlePasswordBlur = (event) => {
     const passwordValue = event.target.value.trim();
-    this.setState({
-      isPasswordEntered: passwordValue.length > 0
-    }, () => {
-      this.updateLoginButton();  
-    });
-  };
-  
-
-  isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  isBlank = (value) => {
-    return value === "";
+    this.setState(
+      {
+        isPasswordEntered: passwordValue.length > 0,
+      },
+      () => {
+        this.updateLoginButton();
+      }
+    );
   };
 
   togglePasswordVisibility = () => {
@@ -91,6 +66,10 @@ export class Home extends Component {
           : "bi-eye-fill",
     }));
   };
+
+  handleValidEmailChange = (isValid) => {
+    this.setState({ isEmailValid: isValid }, this.updateLoginButton);
+};
 
   render() {
     return (
@@ -104,17 +83,7 @@ export class Home extends Component {
           </h1>
 
           <label>Email</label>
-          <input
-            id="emailInputId"
-            type="email"
-            name="Email"
-            required
-            style={this.state.emailInputStyle}
-            onBlur={this.handleEmailBlur}
-          />
-          {this.state.isEmailErrorMessageVisible && (
-            <div className="emailErrorMessage">Please use a valid email.</div>
-          )}
+          <EmailInput onValidChange={this.handleValidEmailChange} />
 
           <label>Password</label>
           <div class="input-group">
