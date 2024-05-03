@@ -1,0 +1,10 @@
+button {
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 3rem;
+    width: fit-content;
+  }

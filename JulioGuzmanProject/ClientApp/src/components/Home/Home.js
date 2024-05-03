@@ -4,6 +4,7 @@ import DogImage from "../../assets/dog.png";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
 import "./Home.css";
+import LoginButton from "./LoginButton";
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -15,8 +16,6 @@ export class Home extends Component {
     },
     isEmailValid: false,
     isPasswordEntered: false,
-    passwordType: "password",
-    toggleIconClass: "bi-eye-fill",
   };
 
   enableLoginButton = () => {
@@ -45,7 +44,7 @@ export class Home extends Component {
     }
   };
 
-  handleValidEmailChange = (isValid) => {
+  handleEmailChange = (isValid) => {
     this.setState({ isEmailValid: isValid }, this.updateLoginButton);
   };
 
@@ -54,6 +53,8 @@ export class Home extends Component {
   };
 
   render() {
+    const isLoginButtonEnabled =
+      this.state.isEmailValid && this.state.isPasswordEntered;
     return (
       <div className="center">
         <div className="content">
@@ -65,16 +66,17 @@ export class Home extends Component {
           </h1>
 
           <label>Email</label>
-          <EmailInput onValidChange={this.handleValidEmailChange} />
+          <EmailInput onValidChange={this.handleEmailChange} />
 
           <label>Password</label>
           <PasswordInput onPasswordChange={this.handlePasswordChange} />
 
           <Link className="password-reset-link">Forgot Password?</Link>
 
-          <button id="loginButtonId" style={this.state.loginButtonStyles}>
-            Log In
-          </button>
+          <LoginButton
+            isEnabled={isLoginButtonEnabled}
+            styles={this.state.loginButtonStyles}
+          />
 
           <p className="sign-up-message">
             Don't have an account? <Link className="sign-up-link">Sign up</Link>
