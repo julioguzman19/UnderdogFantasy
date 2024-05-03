@@ -1,0 +1,18 @@
+p {
+  font-size: 0.75em;
+}
+.responsible-gaming-container {
+  background: linear-gradient(to bottom right, #d8d8d8, #d8d8d8, #ffe47a);
+}
+
+.responsible-gaming-terms {
+  max-width: 340px;
+}
+
+.color-gold {
+  color: #ad8b00;
+}
+
+.responsible-gaming-terms b {
+  padding-bottom: 100px;
+}
