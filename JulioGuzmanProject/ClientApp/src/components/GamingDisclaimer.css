@@ -16,3 +16,8 @@ p {
 .responsible-gaming-terms b {
   padding-bottom: 100px;
 }
+
+.center {
+  margin: auto;
+  text-align: center;
+}

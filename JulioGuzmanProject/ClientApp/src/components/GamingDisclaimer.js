@@ -3,7 +3,7 @@ import "./GamingDisclaimer.css";
 
 function GamingDisclaimer() {
   return (
-    <div className="responsible-gaming-container">
+    <div className="responsible-gaming-container center">
       <p className="responsible-gaming-terms">
         <b className="color-gold">Underdog Responsible Gaming</b>
         <br />
