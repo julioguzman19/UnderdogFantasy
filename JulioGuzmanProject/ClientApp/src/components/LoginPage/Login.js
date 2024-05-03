@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import DogImage from "../../assets/dog.png";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
-import "./Home.css";
 import LoginButton from "./LoginButton";
+import "./Login.css";
 
-export class Home extends Component {
-  static displayName = Home.name;
+export class Login extends Component {
+  static displayName = Login.name;
 
   state = {
     loginButtonStyles: {
