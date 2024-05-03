@@ -87,7 +87,8 @@ export class Home extends Component {
             If you or someone you know has a gambling problem, help is
             available.
             <br />
-            Call 1-800-GAMBLER or go to <a>ncpgambling.org.</a>
+            Call 1-800-GAMBLER or go to{" "}
+            <a href="https://www.ncpgambling.org">ncpgambling.org</a>.
           </p>
 
           <div className="responsible-gaming-container">
@@ -96,12 +97,20 @@ export class Home extends Component {
               <br />
               <b>Concerned with your play?</b>
               <br />
-              Call 1-800-GAMBLER or visit www.ncpgambling.org; AZ:
+              Call 1-800-GAMBLER or visit{" "}
+              <a href="https://www.ncpgambling.org">www.ncpgambling.org</a>; AZ:
               1-800-NEXT-STEP (1-800-639-8783) or text NEXT-STEP to 53342; NY:
               Call the 24/7 HOPEline at 1-877-8-HOPENY or Text HOPENY (467369)
               Learn more about Underdog Contests and how to identify highly
-              experienced players at www.underdogfantasy.com/rules; Learn more
-              about average results at www.underdogfantasy.com/average-results
+              experienced players at{" "}
+              <a href="https://www.underdogfantasy.com/rules">
+                www.underdogfantasy.com/rules
+              </a>
+              ; Learn more about average results at{" "}
+              <a href="https://www.underdogfantasy.com/average-results">
+                www.underdogfantasy.com/average-results
+              </a>
+              .
             </p>
           </div>
         </div>
