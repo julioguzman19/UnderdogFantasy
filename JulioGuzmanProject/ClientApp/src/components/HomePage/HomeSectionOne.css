@@ -1,0 +1,92 @@
+.hero-container{
+  background-color: rgb(224, 180, 0);;
+}
+.hero-row {
+  align-items:center;
+  column-gap: 5px;
+  display: grid;
+  padding-top: 10px;
+  margin:0 10px;
+}
+
+.image-text-wrapper{
+  align-items:center;
+  display: flex;
+  flex-direction: row;
+  grid-column: 1;
+  padding: 0px;
+  text-align: center;
+}
+
+.dog-logo-image {
+  height: 45px;
+  width: auto;
+}
+
+.dog-logo-text {
+  color: #1b1b1b;
+  font-family: Kanit, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.login-button{
+  background-color: rgba(34,34,34,.2);
+  color:#1b1b1b;
+  font-size: 18px;
+  grid-column: 2;
+  padding: 6px 18px;
+  white-space: nowrap;
+}
+
+.signup-button{
+  background-color: #0ea023;
+  color: #f0f0f0;
+  font-size: 18px;
+  grid-column: 3;
+  padding: 6px 18px;
+  white-space: nowrap;
+}
+
+
+.promotion-message-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.win-money-text{
+  color: #1b1b1b;
+  font-family: Kanit;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.phone-image{
+  height: 300px;
+  width: 200px;
+}
+
+.content-part {
+  padding: 20px;
+  margin: 10px;
+}
+
+@media (min-width: 600px) {
+  .responsive-container {
+    flex-direction: row;
+  }
+
+  .content-part {
+    flex: 1; /* Each part takes equal width */
+  }
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}

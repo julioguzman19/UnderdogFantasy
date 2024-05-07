@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import GamingDisclaimer from "../GamingDisclaimer";
 import "./HomePage.css";
 import TextCarousel from "./TextCarousel";
+import HomeSectionOne from "./HomeSectionOne";
+import GamingDisclaimer from "../GamingDisclaimer";
 
 export class HomePage extends Component {
   static displayName = HomePage.name;
@@ -9,9 +10,9 @@ export class HomePage extends Component {
   render() {
     return (
       <div>
-       <TextCarousel />
-
-       <GamingDisclaimer />
+        <TextCarousel />
+        <HomeSectionOne />
+        <GamingDisclaimer />
       </div>
     );
   }

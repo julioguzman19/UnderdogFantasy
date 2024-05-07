@@ -16,10 +16,10 @@ function PasswordInput({ onPasswordChange }) {
   };
 
   return (
-    <div class="input-group">
+    <div className="input-group">
       <input
         type={isVisible ? "text" : "password"}
-        class="form-control"
+        className="form-control"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         onBlur={handleBlur}
