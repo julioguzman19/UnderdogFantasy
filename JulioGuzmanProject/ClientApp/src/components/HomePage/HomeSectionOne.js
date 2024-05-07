@@ -14,14 +14,15 @@ function HomeSectionOne() {
             FANTASY
           </p>
         </div>
-
-        <button className="login-button">Log in</button>
-        <button className="signup-button">Sign up</button>
+        <div className="buttons-wrapper">
+          <button className="login-button">Log in</button>
+          <button className="signup-button">Sign up</button>
+        </div>
       </div>
 
       <div className="promotion-message-container">
-        <div className="win-money-text">WIN MONEY<br />ON SPORTS</div>
-        <img className="phone-image center" src={PhoneImage} alt="Phone"/>
+        <div className="win-money-text">WIN MONEY<br/>ON SPORTS</div>
+        <img className="phone-image center" src={PhoneImage} alt="Phone" />
       </div>
     </div>
   );
