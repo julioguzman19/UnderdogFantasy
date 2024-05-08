@@ -1,6 +1,6 @@
 .hero-row {
     align-items: center;
-    column-gap: 30px;
+    column-gap: 10px;
     display: grid;
     padding-top: 10px;
   }
@@ -15,14 +15,14 @@
   }
   
   .dog-logo-image {
-    height: 35px;
+    height: 40px;
     width: auto;
   }
   
   .dog-logo-text {
     color: #1b1b1b;
     font-family: Kanit, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-style: italic;
     font-weight: 900;
     text-transform: uppercase;
@@ -37,7 +37,7 @@
     background-color: rgba(34, 34, 34, 0.2);
     color: #1b1b1b;
     font-size: 20px;
-    padding: 8px 16px;
+    padding: 6px 16px;
     white-space: nowrap;
   }
   
@@ -45,6 +45,6 @@
     background-color: #0ea023;
     color: #f0f0f0;
     font-size: 20px;
-    padding: 8px 16px;
+    padding: 6px 16px;
     white-space: nowrap;
   }

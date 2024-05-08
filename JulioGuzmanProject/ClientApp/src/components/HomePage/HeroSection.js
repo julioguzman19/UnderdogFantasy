@@ -3,7 +3,6 @@ import DogImage from "../../assets/dog.png";
 
 function HeroSection() {
   return (
-    <div className="hero-container">
       <div className="hero-row">
         <div className="image-text-wrapper">
           <img className="dog-logo-image" src={DogImage} alt="Dog" />
@@ -18,7 +17,6 @@ function HeroSection() {
           <button className="signup-button">Sign up</button>
         </div>
       </div>
-    </div>
   );
 }
 export default HeroSection;

@@ -4,28 +4,51 @@
 }
 
 .promotion-message-container {
-  column-gap: 40px;
+  align-items: center ;
+  column-gap: 10px;
   display: flex;
   flex-direction: row;
   padding-top: 20px;
-  text-align: center;
 }
 
 .win-money-text {
-  align-content: center;
   color: #1b1b1b;
-  font-family: Kanit;
-  font-size: 48px;
+  font-family: Kanit, sans-serif; 
+  font-size: 36px;
   font-style: italic;
   font-weight: 900;
-  line-height: 50px;
-  max-width: 40%;
   text-transform: uppercase;
 }
 
+.qr-code-section {
+  background-color: #1b1b1b;
+  border-radius: 8px; 
+  column-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  margin-top: 20px;
+}
+
+.qr-code-section-text {
+  align-items: center;
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.qr-code-section-image {
+  border-radius: 4px;
+  height: 80px;
+  width: auto;
+}
+
 .phone-image {
-  height: 260px;
-  max-width: 60%;
+  height: 215px;
+  max-width: 40%;
   width: auto;
 }
 
