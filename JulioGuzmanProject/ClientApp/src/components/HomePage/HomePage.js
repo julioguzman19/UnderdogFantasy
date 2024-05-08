@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import TextCarousel from "./TextCarousel";
-import HomeSectionOne from "./HomeSectionOne";
+import SectionOne from "./SectionOne";
+import SectionTwo from "./SectionTwo";
 import GamingDisclaimer from "../GamingDisclaimer";
 
 export class HomePage extends Component {
@@ -11,7 +12,8 @@ export class HomePage extends Component {
     return (
       <div>
         <TextCarousel />
-        <HomeSectionOne />
+        <SectionOne />
+        <SectionTwo/>
         <GamingDisclaimer />
       </div>
     );

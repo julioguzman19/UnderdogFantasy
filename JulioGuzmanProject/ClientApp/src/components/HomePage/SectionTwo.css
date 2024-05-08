@@ -1,0 +1,24 @@
+.container {
+  background-color: lightgray;
+  padding: 10px 10px;
+}
+
+h2 {
+  color: #1b1b1b;
+  font-family: Kanit, sans-serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  color: red; /* color: #1b1b1b; testing as this will affect all p tags in this folder
+  .. potentially. Either use a Global.css for colors, font-family, font-sizes, etc. or something else */
+  font-family: roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  padding-top: 10px;
+  text-align: center;
+}
