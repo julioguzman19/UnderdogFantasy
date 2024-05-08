@@ -1,0 +1,50 @@
+.hero-row {
+    align-items: center;
+    column-gap: 30px;
+    display: grid;
+    padding-top: 10px;
+  }
+  
+  .image-text-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    grid-column: 1;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .dog-logo-image {
+    height: 35px;
+    width: auto;
+  }
+  
+  .dog-logo-text {
+    color: #1b1b1b;
+    font-family: Kanit, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  .buttons-wrapper {
+    display: flex;
+    grid-column: 2;
+  }
+  
+  .login-button {
+    background-color: rgba(34, 34, 34, 0.2);
+    color: #1b1b1b;
+    font-size: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+  
+  .signup-button {
+    background-color: #0ea023;
+    color: #f0f0f0;
+    font-size: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
