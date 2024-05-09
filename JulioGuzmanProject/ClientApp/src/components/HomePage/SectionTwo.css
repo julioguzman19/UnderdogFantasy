@@ -1,24 +1,37 @@
-.container {
+.section-two-container {
   background-color: lightgray;
+  display: flex;
+  flex-direction: row;
   padding: 10px 10px;
+  column-gap: 25px;
 }
 
-h2 {
+.section-two-phone-image {
+  height: 260px;
+  width: auto;
+}
+
+.section-two-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section-two-h2 {
   color: #1b1b1b;
   font-family: Kanit, sans-serif;
   font-size: 36px;
   font-style: italic;
   font-weight: 900;
+  line-height: 45px;
+  margin-bottom: auto; /* Pushes p tag to end of parent element */
   text-transform: uppercase;
-  text-align: center;
 }
 
-p {
-  color: red; /* color: #1b1b1b; testing as this will affect all p tags in this folder
-  .. potentially. Either use a Global.css for colors, font-family, font-sizes, etc. or something else */
+.section-two-p {
+  color: #1b1b1b;
   font-family: roboto, sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
-  padding-top: 10px;
-  text-align: center;
+  line-height: 26px;
+  max-width: 136px;
 }

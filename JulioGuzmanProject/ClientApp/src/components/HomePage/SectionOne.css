@@ -46,7 +46,7 @@
   width: auto;
 }
 
-.phone-image {
+.section-one-phone-image {
   height: 215px;
   max-width: 40%;
   width: auto;
@@ -67,7 +67,3 @@
   }
 }
 
-.center {
-  margin: auto;
-  text-align: center;
-}

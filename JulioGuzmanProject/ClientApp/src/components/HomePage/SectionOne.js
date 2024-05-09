@@ -30,7 +30,7 @@ function SectionOne() {
           </div>
         </div>
 
-        <img className="phone-image center" src={PhoneImage} alt="Phone" />
+        <img className="section-one-phone-image" src={PhoneImage} alt="Phone" />
       </div>
     </div>
   );
