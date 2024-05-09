@@ -1,9 +1,10 @@
-.content {
+.login-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
-h1 {
+.login-h1 {
   color: rgb(224, 180, 0);
   font-family: Kanit, sans-serif;
   font-size: 3.5rem;
@@ -11,7 +12,7 @@ h1 {
   font-weight: bold;
 }
 
-label {
+.login-input-label {
   color: #1b1b1b;
   font-size: 1rem;
   font-weight: bold;
@@ -19,7 +20,7 @@ label {
   text-align: start;
 }
 
-.password-reset-link {
+.login-forgot-password {
   color: #6b6b6b;
   font-size: 1rem;
   margin-bottom: 1.5rem;
@@ -38,15 +39,6 @@ label {
   font-weight: bold;
 }
 
-p {
+.login-terms {
   font-size: 0.75em;
-}
-
-.center {
-  margin: auto;
-  text-align: center;
-}
-
-.color-yellow-rgb {
-  color: rgb(224, 180, 0);
 }

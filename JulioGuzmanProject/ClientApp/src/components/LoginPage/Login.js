@@ -57,22 +57,21 @@ export class Login extends Component {
     const isLoginButtonEnabled =
       this.state.isEmailValid && this.state.isPasswordEntered;
     return (
-      <div className="center">
-        <div className="content">
+        <div className="login-container">
           <img src={DogImage} alt="Dog Image" />
-          <h1>
+          <h1 className="login-h1">
             UNDERDOG
             <br />
             FANTASY
           </h1>
 
-          <label>Email</label>
+          <label className="login-input-label">Email</label>
           <EmailInput onValidChange={this.handleEmailChange} />
 
-          <label>Password</label>
+          <label className="login-input-label">Password</label>
           <PasswordInput onPasswordChange={this.handlePasswordChange} />
 
-          <Link className="password-reset-link">Forgot Password?</Link>
+          <Link className="login-forgot-password">Forgot Password?</Link>
 
           <LoginButton
             isEnabled={isLoginButtonEnabled}
@@ -84,7 +83,7 @@ export class Login extends Component {
           </p>
 
           {/* Use a tag when re-directing outside website/app */}
-          <p>
+          <p className="login-terms">
             If you or someone you know has a gambling problem, help is
             available.
             <br />
@@ -93,7 +92,6 @@ export class Login extends Component {
           </p>
           <GamingDisclaimer />
         </div>
-      </div>
     );
   }
 }

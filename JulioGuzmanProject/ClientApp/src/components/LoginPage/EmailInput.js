@@ -37,13 +37,14 @@ function EmailInput({ onValidChange }) {
         type="email"
         name="Email"
         required
+        className="email-input"
         style={emailInputStyle}
         onBlur={handleEmailBlur}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       {isEmailErrorMessageVisible && (
-        <div className="emailErrorMessage">Please enter a valid email.</div>
+        <div className="email-error-message">Please enter a valid email.</div>
       )}
     </div>
   );

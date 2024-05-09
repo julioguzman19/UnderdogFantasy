@@ -1,8 +1,6 @@
-p {
-  font-size: 0.75em;
-}
 .responsible-gaming-container {
   background: linear-gradient(to bottom right, #d8d8d8, #d8d8d8, #ffe47a);
+  font-size: 0.75em;
 }
 
 .responsible-gaming-terms {
@@ -15,9 +13,4 @@ p {
 
 .responsible-gaming-terms b {
   padding-bottom: 100px;
-}
-
-.center {
-  margin: auto;
-  text-align: center;
 }

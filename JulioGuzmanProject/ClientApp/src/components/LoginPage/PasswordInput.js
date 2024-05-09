@@ -19,12 +19,12 @@ function PasswordInput({ onPasswordChange }) {
     <div className="input-group">
       <input
         type={isVisible ? "text" : "password"}
-        className="form-control"
+        className="form-control password-input"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         onBlur={handleBlur}
       />
-      <span class="input-group-text" onClick={togglePasswordVisibility}>
+      <span className="input-group-text" onClick={togglePasswordVisibility}>
         <i className={`bi ${isVisible ? "bi-eye-slash" : "bi-eye-fill"}`} />
       </span>
     </div>
