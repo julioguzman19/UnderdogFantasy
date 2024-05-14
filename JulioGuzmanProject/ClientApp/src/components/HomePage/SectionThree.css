@@ -1,0 +1,27 @@
+.section-three-container {
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+  padding: 10px 10px;
+  margin-left: auto; /* Auto margins required to center when using max-width */
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-three-h2 {
+  font-family: Kanit, sans-serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 43px;
+}
+
+.section-three-p {
+  font-family: roboto, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-left: auto; /* Auto margins required to center when using max-width */
+  margin-right: auto;
+  max-width: 304px;
+  padding: 10px 0px;
+}

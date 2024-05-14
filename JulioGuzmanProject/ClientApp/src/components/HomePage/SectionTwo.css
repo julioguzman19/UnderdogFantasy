@@ -1,5 +1,6 @@
 .section-two-container {
   background-color: lightgray;
+  color: #1b1b1b;
   display: flex;
   flex-direction: row;
   padding: 10px 10px;
@@ -17,18 +18,16 @@
   text-align: center;
 }
 .section-two-h2 {
-  color: #1b1b1b;
   font-family: Kanit, sans-serif;
   font-size: 36px;
   font-style: italic;
   font-weight: 900;
-  line-height: 45px;
+  line-height: 43px;
   margin-bottom: auto; /* Pushes p tag to end of parent element */
   text-transform: uppercase;
 }
 
 .section-two-p {
-  color: #1b1b1b;
   font-family: roboto, sans-serif;
   font-size: 22px;
   font-weight: 300;
