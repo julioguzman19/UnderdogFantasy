@@ -12,7 +12,7 @@ function HeroSection() {
             FANTASY
           </p>
         </div>
-        <div className="buttons-wrapper">
+        <div className="hero-buttons-wrapper">
           <button className="login-button">Log in</button>
           <button className="signup-button">Sign up</button>
         </div>

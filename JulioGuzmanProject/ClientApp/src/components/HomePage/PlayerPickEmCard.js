@@ -4,14 +4,25 @@ function PlayerPickEmCard(props) {
   return (
     <div className="player-pick-em-card-container">
       <div className="player-pick-em-card-row">
-        <img className="player-pick-em-image" src={props.image} />
+        <span className="player-pick-em-diagonal-lines" />
+        <img
+          className="player-pick-em-image"
+          src={props.image}
+          alt="playerImage"
+        />
         <p className="player-pick-em-name">{props.playerName}</p>
       </div>
-      <hr />
+      <hr className="player-pick-em-hr"/>
       <div className="player-pick-em-card-row">
-        <p>{props.stats}</p>
-        <button>{props.buttonOne}</button>
-        <button>{props.buttonTwo}</button>
+        <p className="player-pick-em-stats">{props.stats}</p>
+        <div className="player-pick-em-button-container">
+          <button className="player-pick-em-card-button">
+            {props.buttonOne}
+          </button>
+          <button className="player-pick-em-card-button">
+            {props.buttonTwo}
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@
     text-transform: uppercase;
   }
   
-  .buttons-wrapper {
+  .hero-buttons-wrapper {
     display: flex;
     grid-column: 2;
   }
