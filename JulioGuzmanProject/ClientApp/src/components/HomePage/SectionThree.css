@@ -2,8 +2,6 @@
   background-color: #1b1b1b;
   color: #f0f0f0;
   padding: 10px 10px;
-  margin-left: auto; /* Auto margins required to center when using max-width */
-  margin-right: auto;
   text-align: center;
 }
 
@@ -25,3 +23,9 @@
   max-width: 304px;
   padding: 10px 0px 30px 0px;
 } 
+
+.section-three-pick-em{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

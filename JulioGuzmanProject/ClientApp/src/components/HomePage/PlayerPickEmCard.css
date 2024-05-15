@@ -8,6 +8,7 @@
   font-size: 18px;
   height: 135px;
   margin: auto;
+  overflow: hidden;
   position: relative;
   width: 320px;
 }
@@ -19,22 +20,30 @@
   margin: 10px 10px;
 }
 
-.player-pick-em-hr{
-    margin: 0px;
+.player-pick-em-hr {
+  margin: 0px;
 }
-.player-pick-em-diagonal-lines {
-    background: linear-gradient(to bottom right, red 50%, blue 50%);
-    border-radius: 10px 0px 0px 0px;
-    height: 45px;
-    left:0;
-    position: absolute;
-    top:0;
-    width: 50px;
-    z-index: 0;
-  }
+.player-pick-em-diagonal-line-one {
+  margin-left: -30px;
+  margin-top: -30px;
+  padding: 0px 40px 80px 0px;
+  position: absolute;
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+.player-pick-em-diagonal-line-two {
+  margin-left: 3px;
+  margin-top: 3px;
+  padding: 0px 10px 90px 0px;
+  position: absolute;
+  opacity: 1;
+  transform: rotate(45deg);
+  z-index: 1;
+}
 
 .player-pick-em-image {
-    align-items: center;
+  align-items: center;
   background-color: #f0f0f0;
   border-radius: 50%;
   height: 45px;

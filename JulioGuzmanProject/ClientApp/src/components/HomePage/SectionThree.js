@@ -17,13 +17,44 @@ function SectionThree() {
         Choose higher or lower on 2 to 5 of your favorite players' stats. The
         more you pick, the more you could win.
       </p>
+      <div className="section-three-pick-em">
       <PlayerPickEmCard
+        colorOne="#FEC524"
+        colorTwo="#0E2240"
         image={NikolaJokic}
         stats="15.5 Points"
         playerName="Nikola Jokic"
         buttonOne="Higher"
         buttonTwo="Lower"
       />
+      <PlayerPickEmCard
+        colorOne="#FEC524"
+        colorTwo="#0E2240"
+        image={NikolaJokic}
+        stats="15.5 Points"
+        playerName="Nikola Jokic"
+        buttonOne="Higher"
+        buttonTwo="Lower"
+      />
+      <PlayerPickEmCard
+        colorOne="#FEC524"
+        colorTwo="#0E2240"
+        image={NikolaJokic}
+        stats="15.5 Points"
+        playerName="Nikola Jokic"
+        buttonOne="Higher"
+        buttonTwo="Lower"
+      />
+      <PlayerPickEmCard
+        colorOne="#FEC524"
+        colorTwo="#0E2240"
+        image={NikolaJokic}
+        stats="15.5 Points"
+        playerName="Nikola Jokic"
+        buttonOne="Higher"
+        buttonTwo="Lower"
+      />
+      </div>
     </div>
   );
 }
